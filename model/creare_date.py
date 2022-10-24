@@ -49,3 +49,27 @@ pachet_ore2.instructor_id = 2
 cursant1 = Cursant("Popescu", "Marius", "10/10/2001" )
 cursant.cont = Cont("user1", "parola1", 0)
 
+# Sediu | Numar telefon, Email address
+   sediu_alexandru = Sediu('0230562526', 'dsrp.alexandru@gmail.com')
+   sediu_pacurari = Sediu('0230585642', 'dsrp.pacurari@gmail.com')
+   sediu_nicolina = Sediu('0230568569', 'dsrp.nicolina@gmail.com')
+   sediu_copou = Sediu('0758598698', 'dsrp.copou@gmail.com')
+
+   # Address | Strada, oras, tara, cod postal, Judet
+   adress_alexandru = Address('Sos. Nationala', 'Iasi', 'Romania', 700101, 'Iasi')
+   adress_pacurari = Address('Str. Luca Arbore', 'Iasi', 'Romania,',700102, 'Iasi')
+   adress_nicolina = Address('Str. Frumoasa', 'Iasi', 'Romania,', 700152, 'Iasi')
+   adress_copou = Address('Str. Codrescu', 'Iasi', 'Romania', 700856, 'Iasi')
+   adress5 = Address('Strada5', 'Oras5', 'Tara1,', 1235, 'Judet3')
+
+   # Personal | Nume, prenume
+   personal_alexandru1 = Personal("Ghiata", "Anamaria")
+   personal_alexandru2=Personal("Abaza", "Andreea")
+   personal_pacurari1 = Personal("Hongu", "Cosmin")
+   personal_pacurari2=Personal("Abaza", "Bianca")
+   personal_nicolina1=Personal("Raus", "Ana")
+   personal_nicolina2=Personal("Popescu", "Corina")
+   personal_copou1=Personal("Macaru", "Iraida")
+   personal_copou2=Personal("Socolenco", "Natalia")
+   personal_copou3=Personal("Gradinaru", "Augustin")
+
