@@ -29,3 +29,14 @@ def create_all():
     Base.metadata.drop_all(engine)
     Base.metadata.create_all(engine)
 
+    # Creare cont pentru instructori
+    instructor_cont1 = Cont("user_inst1", "parola1", 1)
+    instructor_cont2 = Cont("user_inst2", "parola2", 1)
+    instructor_cont3 = Cont("user_inst3", "parola3", 1)
+
+    # Creare instructori respectivi | Cont instructor, Vehicul, Personal respectiv
+    instructor1 = adaugare_instructor(Instructor(), instructor_cont1, vehicul1, personal1)
+    instructor2 = adaugare_instructor(Instructor(), instructor_cont2, vehicul2, personal2)
+    instructor3 = adaugare_instructor(Instructor(), instructor_cont3, vehicul3, personal3)
+
+
