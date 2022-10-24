@@ -39,4 +39,13 @@ def create_all():
     instructor2 = adaugare_instructor(Instructor(), instructor_cont2, vehicul2, personal2)
     instructor3 = adaugare_instructor(Instructor(), instructor_cont3, vehicul3, personal3)
 
+ #Creare pachet_ore
+pachet_ore1 = PachetOre(30)
+pachet_ore2 = PachetOre(15)
+pachet_ore1.instructor_id = 1
+pachet_ore2.instructor_id = 2
+
+#Creare Cursant:
+cursant1 = Cursant("Popescu", "Marius", "10/10/2001" )
+cursant.cont = Cont("user1", "parola1", 0)
 
