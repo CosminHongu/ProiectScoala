@@ -88,6 +88,32 @@ def create_all():
     #Creare Cursant:
     cursant1 = Cursant("Popescu", "Marius", "10/10/2001" )
     cursant1.cont = Cont("user1", "parola1", 0)
+    cursant2 = Cursant("Apopei", "Vlad", "12/02/1999")
+    cursant2.cont = Cont("user2", "parola2", 0)
+    cursant3 = Cursant("Macoveanu", "Alina", "25/06/1995")
+    cursant3.cont = Cont("user3", "parola3", 0)
+    cursant4 = Cursant("Onofrei", "Mădălin", "07/08/2000")
+    cursant4.cont = Cont("user4", "parola4", 0)
+    cursant5 = Cursant("Asandului", "Robert", "15/01/2001")
+    cursant5.cont = Cont("user5", "parola5", 0)
+    cursant6 = Cursant("Culincă", "Antonio", "17/09/1996")
+    cursant6.cont = Cont("user6", "parola6", 0)
+    cursant7 = Cursant("Aconstantinesei", "Andreea", "03/04/1997")
+    cursant7.cont = Cont("user7", "parola7", 0)
+    cursant8 = Cursant("Dumbravă", "Carmen", "18/12/2000")
+    cursant8.cont = Cont("user8", "parola8", 0)
+    cursant9 = Cursant("Chihaia", "Georgiana", "20/05/1994")
+    cursant9.cont = Cont("user9", "parola9", 0)
+    cursant10 = Cursant("Bulbuc", "Giulia", "09/07/1998")
+    cursant10.cont = Cont("user10", "parola10", 0)
+    cursant11 = Cursant("Popia", "Emilia", "19/11/2002")
+    cursant11.cont = Cont("user11", "parola11", 0)
+    cursant12 = Cursant("Nazare", "Dragoș", "22/02/1999")
+    cursant12.cont = Cont("user12", "parola12", 0)
+
+
+
+
 
     # Adaugare personal in sediu.
     sediu_alexandru.personal = [personal_alexandru1, personal_alexandru2]
