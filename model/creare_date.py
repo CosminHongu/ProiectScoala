@@ -24,7 +24,6 @@ def adaugare_personal_administrativ(personal_adm, cont, personal):
     return personal_adm
 
 def create_all():
-
 session = Session()
 
 Base.metadata.drop_all(engine)
