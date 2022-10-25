@@ -69,11 +69,15 @@ vehicul5 = Vehicul("Renault", "CLIO IV", "2005")
 instructor_cont1 = Cont("user_inst1", "parola1", 1)
 instructor_cont2 = Cont("user_inst2", "parola2", 1)
 instructor_cont3 = Cont("user_inst3", "parola3", 1)
+instructor_cont4 = Cont("user_inst4", "parola4", 1)
+instructor_cont5 = Cont("user_inst5", "parola5", 1)
 
 # Creare instructori respectivi | Cont instructor, Vehicul, Personal respectiv
 instructor1 = adaugare_instructor(Instructor(), instructor_cont1, vehicul1, personal_pacurari1)
 instructor2 = adaugare_instructor(Instructor(), instructor_cont2, vehicul2, personal_pacurari2)
 instructor3 = adaugare_instructor(Instructor(), instructor_cont3, vehicul3, personal_nicolina2)
+instructor4 = adaugare_instructor(Instructor(), instructor_cont4, vehicul4, personal_copou1)
+instructor5 = adaugare_instructor(Instructor(), instructor_cont5, vehicul5, personal_copou2)
 
 #Creare pachet_ore
 pachet_ore1 = PachetOre(30)
