@@ -15,7 +15,7 @@ from personal_administrativ import PersonalAdministrativ
 
 from base import Session
 from cont import Cont
-from views.user_form import Ui_MainWindow as ContForm
+from views.user_form_view import Ui_MainWindow as ContForm
 from model.achizitionare_ore_control.achizitionare_ore import AchizitoneazaOreWindow
 
 

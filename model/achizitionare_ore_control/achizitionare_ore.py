@@ -14,7 +14,8 @@ from pachet_ore import PachetOre
 from personal_administrativ import PersonalAdministrativ
 from base import Session
 from cont import Cont
-from views.achizitionare_ore import Ui_MainWindow
+
+from views.achizitionare_ore_view import Ui_MainWindow
 
 
 class AchizitoneazaOreWindow(QtWidgets.QMainWindow):
