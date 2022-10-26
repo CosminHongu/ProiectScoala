@@ -16,6 +16,7 @@ from personal_administrativ import PersonalAdministrativ
 from base import Session
 from cont import Cont
 from views.login_form_view import Ui_Form
+from model.user_form_control.user_form_control import ContWindow
 
 
 class LoginWndow(QtWidgets.QWidget):

@@ -15,8 +15,8 @@ from personal_administrativ import PersonalAdministrativ
 
 from base import Session
 from cont import Cont
-from views.cont_form_view import Ui_MainWindow as ContForm
-from model.achizitioneaza_ore_form.achizitoneaza_ore_form import AchizitoneazaOreWindow
+from views.user_form import Ui_MainWindow as ContForm
+from model.achizitioneaza_ore_control.achizitoneaza_ore import AchizitoneazaOreWindow
 
 
 class ContWindow(QtWidgets.QMainWindow):
