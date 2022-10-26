@@ -55,3 +55,7 @@ class ContWindow(QtWidgets.QMainWindow):
                 pass
             elif cont.nivel_cont == 2:
                 pass
+
+
+        session.commit()
+        session.close()
