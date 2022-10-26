@@ -171,11 +171,14 @@ font: 87 20pt &quot;Arial Black&quot;;</string>
      <height>621</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(152, 219, 255);</string>
+   </property>
    <property name="text">
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>C:/Users/cojoc/Downloads/Image1.png</pixmap>
+    <pixmap>../../../../../cojoc/Downloads/Image1.png</pixmap>
    </property>
   </widget>
   <zorder>image_background</zorder>
