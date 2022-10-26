@@ -13,6 +13,8 @@ class Cont(Base):
     personal = relationship("Personal", back_populates="cont")
     instructor = relationship("Instructor", back_populates="cont")
     cursant = relationship("Cursant", back_populates="cont")
+
+    #Mnay to One
     personaladministrativ = relationship("PersonalAdministrativ", back_populates="cont")
 
     def __init__(self, user, parola, nivel_cont):
