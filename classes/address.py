@@ -12,6 +12,7 @@ class Address(Base):
     tara = Column(String)
     cod_postal = Column(Integer)
     judet = Column(String)
+
     # many-to-one scalar
     sediu = relationship("Sediu", back_populates="address", uselist=False)
 

@@ -88,27 +88,27 @@ def create_all():
     #Creare Cursant:
     cursant1 = Cursant("Popescu", "Marius", "10/10/2001" )
     cursant1.cont = Cont("user1", "parola1", 0)
-    cursant2 = Cursant("Apopei", "Vlad", "12/02/1999")
+    cursant2 = Cursant("Apopei", "Vlad", "02/12/1999")
     cursant2.cont = Cont("user2", "parola2", 0)
-    cursant3 = Cursant("Macoveanu", "Alina", "25/06/1995")
+    cursant3 = Cursant("Macoveanu", "Alina", "06/25/1995")
     cursant3.cont = Cont("user3", "parola3", 0)
     cursant4 = Cursant("Onofrei", "Mădălin", "07/08/2000")
     cursant4.cont = Cont("user4", "parola4", 0)
-    cursant5 = Cursant("Asandului", "Robert", "15/01/2001")
+    cursant5 = Cursant("Asandului", "Robert", "01/15/2001")
     cursant5.cont = Cont("user5", "parola5", 0)
-    cursant6 = Cursant("Culincă", "Antonio", "17/09/1996")
+    cursant6 = Cursant("Culincă", "Antonio", "09/17/1996")
     cursant6.cont = Cont("user6", "parola6", 0)
     cursant7 = Cursant("Aconstantinesei", "Andreea", "03/04/1997")
     cursant7.cont = Cont("user7", "parola7", 0)
-    cursant8 = Cursant("Dumbravă", "Carmen", "18/12/2000")
+    cursant8 = Cursant("Dumbravă", "Carmen", "12/18/2000")
     cursant8.cont = Cont("user8", "parola8", 0)
-    cursant9 = Cursant("Chihaia", "Georgiana", "20/05/1994")
+    cursant9 = Cursant("Chihaia", "Georgiana", "05/20/1994")
     cursant9.cont = Cont("user9", "parola9", 0)
     cursant10 = Cursant("Bulbuc", "Giulia", "09/07/1998")
     cursant10.cont = Cont("user10", "parola10", 0)
-    cursant11 = Cursant("Popia", "Emilia", "19/11/2002")
+    cursant11 = Cursant("Popia", "Emilia", "11/19/2002")
     cursant11.cont = Cont("user11", "parola11", 0)
-    cursant12 = Cursant("Nazare", "Dragoș", "22/02/1999")
+    cursant12 = Cursant("Nazare", "Dragoș", "02/22/1999")
     cursant12.cont = Cont("user12", "parola12", 0)
 
 
@@ -130,19 +130,19 @@ def create_all():
 
     # Commit values:
     session.add_all([
-            sediu_alexandru, sediu_pacurari, sediu_nicolina, sediu_copou,
+            sediu_alexandru, sediu_pacurari, sediu_nicolina, sediu_copou, adress5,
 
-            personal_alexandru1, personal_alexandru2, personal_pacurari1, personal_pacurari2, personal_nicolina1, personal_nicolina2, personal_copou1, personal_copou2, personal_copou3.
+            personal_alexandru1, personal_alexandru2, personal_pacurari1, personal_pacurari2, personal_nicolina1, personal_nicolina2, personal_copou1, personal_copou2, personal_copou3,
 
             vehicul1, vehicul2, vehicul3, vehicul5, vehicul4,
 
-            instructor1, instructor2, instructor3,
+            instructor1, instructor2, instructor3, instructor4, instructor5,
 
             pachet_ore1, pachet_ore2,
 
-            personal_adm_cont,
+            personal_adm_cont, personal_adm1,
 
-            cursant1]
+            cursant1, cursant2, cursant4, cursant5, cursant6, cursant7, cursant8, cursant9, cursant10, cursant11, cursant12]
 
         )
 
