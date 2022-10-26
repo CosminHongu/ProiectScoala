@@ -36,6 +36,17 @@ class LoginWndow(QtWidgets.QWidget):
         try:
             query = session.query(Cont).filter(Cont.user == username, Cont.parola == password)
             count = 0
+            for row in query:
+                if row.user:
+                    count += 1
+            if count == 1:
+                print("Login succesful")
+                LoginWndow.hide(self)
+                self.new_window = ContWindow(username)
+                self.new_window.show()
+
+            else:
+                print("Failed")
 
         except Exception as e:
             print(e)
