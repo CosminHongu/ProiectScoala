@@ -9,7 +9,7 @@ class Vehicul(Base):
     marca = Column(String)
     model = Column(String)
     anFabricatie = Column(String)
-    instructor = relationship("Instructor", back_populates="vehicul")
+    instructor = relationship("Instructor", back_populates="vehicul", uselist = False)
 
     def __init__(self, marca, model, anFabricatie):
         self.marca = marca

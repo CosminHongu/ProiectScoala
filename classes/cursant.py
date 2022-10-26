@@ -14,6 +14,8 @@ class Cursant(Base):
     pachet_ore_id = Column(Integer, ForeignKey("pachet_ore.id"))
     nr_ore = Column(Integer)
     ore_finalizate = Column(Integer)
+
+    #One To One
     cont = relationship("Cont", back_populates="cursant")
     cont_id = Column(Integer, ForeignKey("cont.id"))
 

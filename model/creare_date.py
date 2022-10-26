@@ -82,8 +82,8 @@ def create_all():
     #Creare pachet_ore
     pachet_ore1 = PachetOre(30)
     pachet_ore2 = PachetOre(15)
-    pachet_ore1.instructor_id = 1
-    pachet_ore2.instructor_id = 2
+    pachet_ore1.instructor = [instructor1, instructor2]
+    pachet_ore2.instructor = [instructor5, instructor4]
 
     #Creare Cursant:
     cursant1 = Cursant("Popescu", "Marius", "10/10/2001" )
@@ -125,7 +125,7 @@ def create_all():
     sediu_nicolina.address = adress_nicolina
     sediu_copou.address = adress_copou
 
-    personal_adm_cont = Cont("adm1", "parola_adm", 2)
+    personal_adm_cont = Cont("adm1", "parola_adm", 3)
     personal_adm1 = adaugare_personal_administrativ(PersonalAdministrativ(),personal_adm_cont, personal_copou3)
 
     # Commit values:
