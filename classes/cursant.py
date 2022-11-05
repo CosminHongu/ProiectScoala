@@ -6,14 +6,14 @@ from sqlalchemy import Column, String, Integer, Date, Table, ForeignKey
 class Cursant(Base):
     __tablename__ = 'cursant'
 
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer(100), primary_key=True)
     nume = Column(String(100), nullable=False)
     prenume = Column(String(100), nullable=False)
     dataNasterii = Column(Date)
     pachet_ore = relationship("PachetOre")
-    pachet_ore_id = Column(Integer, ForeignKey("pachet_ore.id"))
-    nr_ore = Column(Integer)
-    ore_finalizate = Column(Integer)
+    pachet_ore_id = Column(Integer(100), ForeignKey("pachet_ore.id"))
+    nr_ore = Column(Integer(100), nullable=False)
+    ore_finalizate = Column(Integer(100), nullable=False)
 
     #One To One
     cont = relationship("Cont", back_populates="cursant")
