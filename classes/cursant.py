@@ -7,8 +7,8 @@ class Cursant(Base):
     __tablename__ = 'cursant'
 
     id = Column(Integer, primary_key=True)
-    nume = Column(String)
-    prenume = Column(String)
+    nume = Column(String(100), nullable=False)
+    prenume = Column(String(100), nullable=False)
     dataNasterii = Column(Date)
     pachet_ore = relationship("PachetOre")
     pachet_ore_id = Column(Integer, ForeignKey("pachet_ore.id"))

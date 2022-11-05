@@ -7,8 +7,8 @@ class Cont(Base):
     __tablename__ = 'cont'
 
     id = Column(Integer, primary_key=True)
-    user = Column(String)
-    parola = Column(String)
+    user = Column(String(100), nullable=False)
+    parola = Column(String(100), nullable=False)
     nivel_cont = Column(Integer)  # Nivel 1 - User, 2 - Instructor, 3 - Administrator
 
     # One To One
