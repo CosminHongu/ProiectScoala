@@ -14,7 +14,7 @@ class Personal(Base):
     nume = Column(String(100), nullable=False)
     prenume = Column(String(100), nullable=False)
     cont = relationship("Cont", back_populates="personal")
-    cont_id = Column(Integer, ForeignKey("cont.id"), nullable=False)
+    cont_id = Column(Integer(100), ForeignKey("cont.id"), nullable=False)
     instructor = relationship("Instructor", back_populates="personal", uselist=False)
     personaladministrativ = relationship("PersonalAdministrativ", back_populates="personal", uselist=False)
 
