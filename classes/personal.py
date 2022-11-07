@@ -10,7 +10,7 @@ class Personal(Base):
     # Atributul back_populates este folosit pentru ca engine-ul sa inteleaga ca este o relatie si sa
     # populeze automatat clasa copil cand clasa parinte este creata.
 
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer(100), primary_key=True)
     nume = Column(String(100), nullable=False)
     prenume = Column(String(100), nullable=False)
     cont = relationship("Cont", back_populates="personal")
