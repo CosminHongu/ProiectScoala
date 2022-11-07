@@ -10,6 +10,8 @@ from sqlalchemy import Column, String, Integer, Date, Table, ForeignKey
 class PachetOre(Base):
     __tablename__ = 'pachet_ore'
 #MANY TO MANY
+# Se creaza automat o tabela ajutatoare pentru manytomany relatii in care se
+# populeaza cu relatiile dintre clasa parinte si cea copil
     instructor_pachet_ore_relationship = Table('instructor_pachet_ore_relationship', Base.metadata,
                                     Column('instructor_id', Integer(100), ForeignKey('instructor.id')),
                                     Column('pachet_ore_id', Integer(100), ForeignKey('pachet_ore.id')),
@@ -18,7 +20,11 @@ class PachetOre(Base):
 
     id = Column(Integer(100), primary_key=True)
     durata = Column(Integer(100), nullable=False)
+    pret = Column(Integer(100), nullable=False)
+    #Definirea relatiiei manytomany si atribuirea tabelei ajutatoare eg: secondary="tabela_ajutatoare".
     instructor = relationship('Instructor', secondary=instructor_pachet_ore_relationship)
 
-    def __init__(self, durata):
+    #Initializare getters si setters.
+    def __init__(self, durata, pret):
         self.durata = durata
+        self.pret = pret
