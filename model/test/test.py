@@ -13,3 +13,6 @@ from vehicul import Vehicul
 
 def test1()
     #Urmeaza sa facem testele aici
+
+#Anamaria
+#Test: Care este personalul administrativ din sediul_Nicolina?

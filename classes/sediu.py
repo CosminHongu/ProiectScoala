@@ -14,15 +14,32 @@ class Sediu(Base):
                                   )
     id = Column(Integer, primary_key=True)
     numarTelefon = Column(Integer)
-    emailAddress = Column(String)
+    emailAddress = Column(String(100), nullable=False)
+    denumire_sediu=Column(String(100), nullable=False)
 
+    # Atributul back-populates este folosit pentru ca engine-ul sa intelelaga
+    # ca este o relatie si sa populeze automat clasa copil cand clasa parinte este creata.
+
+    @validates("numarTelefon")
+    def validate_numarTelefon(self, key, numarTelefon):
+        if len(str(numarTelefon)) != 10:
+            raise ValueError("Numar de telefon incorect!")
+        return numarTelefon
     address = relationship("Address", back_populates="sediu")
     address_id = Column(Integer, ForeignKey("address.id"))
     personal = relationship('Personal', secondary=personal_relationship)
 
-
-    # idPersonal = Column(String)
-
-    def __init__(self, numarTelefon, emailAddress):
+    # setare getters & setters
+    def __init__(self, numarTelefon, emailAddress, denumire_sediu="Scoala de soferi"):
         self.numarTelefon = numarTelefon
         self.emailAddress = emailAddress
+        self.denumire_sediu = denumire_sediu
+
+    # Modificare setters & getters
+    @hybrid_property
+    def email(self):
+        return self.emailAddress
+
+    @email.setter
+    def email(self, email):
+        self.emailAddress = email
