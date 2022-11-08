@@ -1,4 +1,4 @@
-from sqlalchemy.orm import relationship
+from sqlalchemy.orm import relationship, validates
 from base import Base
 from sqlalchemy import Column, String, Integer, Date, Table, ForeignKey
 
@@ -8,6 +8,8 @@ class Instructor(Base):
 
     id = Column(Integer(100), primary_key=True)
 
+    # Atributul back_populates este folosit pentru ca engine-ul sa inteleaga ca este o relatie si sa
+    # populeze automatat clasa copil cand clasa parinte este creata.
     #One to One toate
     personal = relationship("Personal", back_populates="instructor")
     personal_id = Column(Integer(100), ForeignKey("personal.id"))

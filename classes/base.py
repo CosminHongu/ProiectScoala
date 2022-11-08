@@ -7,4 +7,5 @@ engine = create_engine('postgresql://CAIA:postgres@localhost:5432/CAIA1')
 #Creare conexiune noua la baza de date
 Session = sessionmaker(bind=engine)
 
+# In base se stocheaza tot ce tine de clase (metadata)
 Base = declarative_base()

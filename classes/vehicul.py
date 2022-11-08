@@ -1,4 +1,4 @@
-from sqlalchemy.orm import relationship
+from sqlalchemy.orm import relationship, validates
 from base import Base
 from sqlalchemy import Column, String, Integer, Date, Table, ForeignKey
 
@@ -9,8 +9,9 @@ class Vehicul(Base):
     marca = Column(String(100), nullable=False)
     model = Column(String(100), nullable=False)
     anFabricatie = Column(String(4), nullable=False)
-    cutie_de_viteze=Column(String(100), nullable=False)
-    numar_de_inmatriculare=Column(String(10), nullable=False)
+    cutie_de_viteze= Column(String(100), nullable=False)
+    numar_de_inmatriculare= Column(String(10), nullable=False)
+
     # Atributul back-populates este folosit pentru ca engine-ul sa intelelaga
     # ca este o relatie si sa populeze automat clasa copil cand clasa parinte este creata.
     instructor = relationship("Instructor", back_populates="vehicul", uselist = False)
@@ -22,7 +23,7 @@ class Vehicul(Base):
         return anFabricatie
 
     @validates("numar_de_inmatriculare")
-    def validate_numar_de_inmatriculare(self, key, anFabricatie):
+    def validate_numar_de_inmatriculare(self, key, numar_de_inmatriculare):
             if len(str(numar_de_inmatriculare)) != 7:
                 raise ValueError("Numarul de inmatriculare nu este corect!")
             return numar_de_inmatriculare

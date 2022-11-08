@@ -1,4 +1,4 @@
-from sqlalchemy.orm import relationship
+from sqlalchemy.orm import relationship, validates
 from base import Base
 from sqlalchemy import Column, String, Integer, Date, Table, ForeignKey
 

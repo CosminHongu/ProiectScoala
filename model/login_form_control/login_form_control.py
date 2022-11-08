@@ -26,8 +26,8 @@ class LoginWndow(QtWidgets.QWidget):
         self.new_window = None
         self.ui_loginForm = Ui_Form()
         self.ui_loginForm.setupUi(self)
-
-        self.ui_loginForm.login_button.clicked.connect(self.login_check)
+            #sub-sub clasa pentru clasa QWidget. Tot ce e in login form am luat si am pus in LoginWindow, o subclasa.
+        self.ui_loginForm.login_button.clicked.connect(self.login_check) #accesam metoda, de click si da connect pentru a face legatura cu o functie.
 
     def login_check(self):
         username = self.ui_loginForm.username_input.text()

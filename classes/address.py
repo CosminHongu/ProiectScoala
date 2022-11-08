@@ -13,7 +13,7 @@ class Address(Base):
     cod_postal = Column(Integer(100), nullable=False)
     judet = Column(String(100), nullable=False)
 
-    # One to One relationship
+    # OnetoOne relationship
     sediu = relationship("Sediu", back_populates="address", uselist=False)
 
 

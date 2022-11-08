@@ -1,4 +1,4 @@
-from sqlalchemy.orm import relationship
+from sqlalchemy.orm import relationship, validates
 from base import Base
 from sqlalchemy import Column, String, Integer, Date, Table, ForeignKey
 
@@ -9,9 +9,9 @@ from sqlalchemy import Column, String, Integer, Date, Table, ForeignKey
 
 class PachetOre(Base):
     __tablename__ = 'pachet_ore'
-#MANY TO MANY
-# Se creaza automat o tabela ajutatoare pentru manytomany relatii in care se
-# populeaza cu relatiile dintre clasa parinte si cea copil
+    #MANY TO MANY
+    # Se creaza automat o tabela ajutatoare pentru manytomany relatii in care se
+    # populeaza cu relatiile dintre clasa parinte si cea copil
     instructor_pachet_ore_relationship = Table('instructor_pachet_ore_relationship', Base.metadata,
                                     Column('instructor_id', Integer(100), ForeignKey('instructor.id')),
                                     Column('pachet_ore_id', Integer(100), ForeignKey('pachet_ore.id')),
