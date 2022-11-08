@@ -28,4 +28,4 @@ class Programare(Base):
                 raise ValueError("Ora programata este peste program")
             if (ora % 2) != 0:
                 raise ValueError("Ora programata este gresita")
-            return
+            return ora

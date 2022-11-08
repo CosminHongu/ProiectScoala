@@ -6,16 +6,16 @@ from sqlalchemy import Column, String, Integer, Date, Table, ForeignKey
 class Cursant(Base):
     __tablename__ = 'cursant'
 
-    id = Column(Integer(100), primary_key=True)
+    id = Column(Integer, primary_key=True)
     nume = Column(String(100), nullable=False)
     prenume = Column(String(100), nullable=False)
     dataNasterii = Column(Date)
     pachet_ore = relationship("PachetOre")
-    pachet_ore_id = Column(Integer(100), ForeignKey("pachet_ore.id"))
+    pachet_ore_id = Column(Integer, ForeignKey("pachet_ore.id"))
     instructor = relationship("Instructor")
     instructor_id = Column(Integer, ForeignKey("instructor.id"))
-    nr_ore = Column(Integer(100), nullable=False)
-    ore_finalizate = Column(Integer(100), nullable=False)
+    nr_ore = Column(Integer, nullable=False)
+    ore_finalizate = Column(Integer, nullable=False)
 
     programare = relationship("Programare")
     # Atributul back_populates este folosit pentru ca engine-ul sa inteleaga ca este o relatie si sa

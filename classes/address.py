@@ -6,11 +6,11 @@ from sqlalchemy import Column, String, Integer, Date, Table, ForeignKey
 class Address(Base):
     __tablename__ = 'address'
 
-    id = Column(Integer(100), primary_key=True)
+    id = Column(Integer, primary_key=True)
     strada = Column(String(100), nullable=False)
     oras = Column(String(100), nullable=False)
     tara = Column(String(100), nullable=False)
-    cod_postal = Column(Integer(100), nullable=False)
+    cod_postal = Column(Integer, nullable=False)
     judet = Column(String(100), nullable=False)
 
     # OnetoOne relationship

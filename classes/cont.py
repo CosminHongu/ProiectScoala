@@ -6,10 +6,10 @@ from sqlalchemy import Column, String, Integer, Date, Table, ForeignKey  # Impor
 class Cont(Base):
     __tablename__ = 'cont'
 
-    id = Column(Integer(100), primary_key=True)
+    id = Column(Integer, primary_key=True)
     user = Column(String(100), nullable=False)
     parola = Column(String(100), nullable=False)
-    nivel_cont = Column(Integer(100), nullable=False)  # Nivel 1 - User, 2 - Instructor, 3 - Administrator
+    nivel_cont = Column(Integer, nullable=False)  # Nivel 1 - User, 2 - Instructor, 3 - Administrator
 
     # Atributul back_populates este folosit pentru ca engine-ul sa inteleaga ca este o relatie si sa
     # populeze automatat clasa copil cand clasa parinte este creata.

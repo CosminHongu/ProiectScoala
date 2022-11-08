@@ -13,14 +13,14 @@ class PachetOre(Base):
     # Se creaza automat o tabela ajutatoare pentru manytomany relatii in care se
     # populeaza cu relatiile dintre clasa parinte si cea copil
     instructor_pachet_ore_relationship = Table('instructor_pachet_ore_relationship', Base.metadata,
-                                    Column('instructor_id', Integer(100), ForeignKey('instructor.id')),
-                                    Column('pachet_ore_id', Integer(100), ForeignKey('pachet_ore.id')),
+                                    Column('instructor_id', Integer, ForeignKey('instructor.id')),
+                                    Column('pachet_ore_id', Integer, ForeignKey('pachet_ore.id')),
 
                                     )
 
-    id = Column(Integer(100), primary_key=True)
-    durata = Column(Integer(100), nullable=False)
-    pret = Column(Integer(100), nullable=False)
+    id = Column(Integer, primary_key=True)
+    durata = Column(Integer, nullable=False)
+    pret = Column(Integer, nullable=False)
     #Definirea relatiiei manytomany si atribuirea tabelei ajutatoare eg: secondary="tabela_ajutatoare".
     instructor = relationship('Instructor', secondary=instructor_pachet_ore_relationship)
 
