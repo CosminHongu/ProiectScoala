@@ -165,6 +165,10 @@ def create_all():
     programare3.cursant = cursant8
     programare3.instructor = instructor1
 
+    programare4 = Programare("2022-11-02", 16)
+    programare4.cursant = cursant7
+    programare4.instructor = instructor1
+
     # Commit values:
     session.add_all([
             sediu_alexandru, sediu_pacurari, sediu_nicolina, sediu_copou, adress5,
@@ -178,7 +182,7 @@ def create_all():
 
             pachet_ore1, pachet_ore2,
 
-            programare1, programare2, programare3,
+            programare1, programare2, programare3, programare4,
 
             personal_adm_cont, personal_adm1,
 
