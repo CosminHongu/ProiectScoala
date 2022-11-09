@@ -11,6 +11,7 @@ from address import Address
 from cursant import Cursant
 from vehicul import Vehicul
 from pachet_ore import PachetOre
+from programare import Programare
 from personal_administrativ import PersonalAdministrativ
 
 from base import Session

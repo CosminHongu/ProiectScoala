@@ -13,6 +13,7 @@ from vehicul import Vehicul
 from pachet_ore import PachetOre
 from personal_administrativ import PersonalAdministrativ
 from base import Session
+from programare import Programare
 from cont import Cont
 
 from views.achizitionare_ore_view import Ui_MainWindow

@@ -10,6 +10,7 @@ from sediu import Sediu
 from address import Address
 from cursant import Cursant
 from vehicul import Vehicul
+from programare import Programare
 from pachet_ore import PachetOre
 from personal_administrativ import PersonalAdministrativ
 
