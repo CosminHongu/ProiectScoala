@@ -157,9 +157,6 @@ def create_all():
     programare1.cursant = cursant1
     programare1.instructor = instructor1
 
-    programare2 = Programare("2022-11-02", 10)
-    programare2.cursant = cursant2
-    programare2.instructor = instructor2
 
     programare3 = Programare("2022-11-02", 12)
     programare3.cursant = cursant8
@@ -168,6 +165,12 @@ def create_all():
     programare4 = Programare("2022-11-02", 16)
     programare4.cursant = cursant7
     programare4.instructor = instructor1
+
+    # Adaugare programari pentru un anumit instructor
+    for i in range(7):
+        k = Programare(f"2022-11-{i + 1}")
+        k.instructor = instructor1
+        session.add(k)
 
     # Commit values:
     session.add_all([
@@ -182,7 +185,7 @@ def create_all():
 
             pachet_ore1, pachet_ore2,
 
-            programare1, programare2, programare3, programare4,
+            programare1, programare3, programare4,
 
             personal_adm_cont, personal_adm1,
 
